@@ -12,9 +12,15 @@ const HomePageButtons = ({ isAuthenticated, logout }) => {
         >
           Manage Users
         </Link>
+        <Link
+          to={routes.adminContests()}
+          className="ml-4 rounded bg-orange-500 py-2 px-4 font-bold text-white hover:bg-orange-700"
+        >
+          Manage Contests
+        </Link>
         <button
           onClick={logout}
-          className="rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700 ml-4"
+          className="ml-4 rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700"
         >
           Logout
         </button>
@@ -47,9 +53,9 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex h-screen flex-col items-center justify-center">
         <h1 className="text-4xl font-bold">Welcome to Bingo</h1>
-        <div className="flex flex-row mt-4">
+        <div className="mt-4 flex flex-row">
           <HomePageButtons isAuthenticated={isAuthenticated} logout={logOut} />
         </div>
       </div>
