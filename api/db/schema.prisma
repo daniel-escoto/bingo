@@ -19,3 +19,17 @@ model User {
   resetToken          String?
   resetTokenExpiresAt DateTime?
 }
+
+model Contest {
+  id          Int      @id @default(autoincrement())
+  name        String
+  textWord    String
+  maxEntries  Int
+  numWinners  Int
+  loserGets   Boolean
+  startDate   DateTime
+  endDate     DateTime
+  enterMsg    String
+  winnerMsg   String
+  loserMsg    String
+}
